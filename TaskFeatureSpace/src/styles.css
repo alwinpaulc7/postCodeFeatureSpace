@@ -1,0 +1,111 @@
+/* @import "~bootstrap/dist/css/bootstrap.css";
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.autocomplete {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.ng-autocomplete {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.ng-autocomplete .mat-autocomplete-panel {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.postCode-Details {
+    margin-bottom: 1rem;
+}
+
+.postCode-Details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.postCode-Details ul li {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem;
+}
+
+.nearest-postCode-Details {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.autocomplete {
+    float: left;
+    width: 50%;
+}
+
+.postCode-Details {
+    float: left;
+    width: 25%;
+}
+
+.nearest-postCode-Details {
+    float: left;
+    width: 25%;
+} */
+
+body {
+    padding: 50px;
+    line-height: 150%;
+}
+
+
+/* Add Styles for your cards here */
+
+
+/* ------ */
+
+
+/* Animation SCSS */
+
+.come-in {
+    -webkit-transform: translateY(150px);
+    -ms-transform: translateY(150px);
+    transform: translateY(150px);
+    -webkit-animation: come-in 0.8s ease forwards;
+    animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+}
+
+.already-visible {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation: none;
+    animation: none;
+}
+
+@-webkit-keyframes come-in {
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes come-in {
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}

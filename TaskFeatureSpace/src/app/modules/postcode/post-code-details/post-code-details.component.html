@@ -1,0 +1,41 @@
+<!-- Post Code details card -->
+<div class="row mt-5">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="card-header" style="text-align: center;">
+                PostCode Details of <b>{{postCodeDetails?.currentPostCode?.postCode}}</b>
+            </div>
+            <div class="card-body" style="background-color: #e9e8eb;">
+
+                <ul class="list-group">
+                    <li class="list-group-item"><b>PostCode :</b>{{postCodeDetails?.currentPostCode?.postCode}}</li>
+                    <li class="list-group-item"><b>Region :</b>{{postCodeDetails?.currentPostCode?.region}}</li>
+                    <li class="list-group-item"><b>Country :</b>{{postCodeDetails?.currentPostCode?.country}}</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Nearest postcode details card -->
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="card-header" style="text-align: center;">
+                Nearby PostCode Details of <b>{{postCodeDetails?.currentPostCode?.postCode}}</b>
+            </div>
+            <div class="card-body" s style="overflow-y: auto; background-color: #e9e8eb;">
+
+                <ul class="list-group" *ngFor="let near of postCodeDetails?.nearestPostcodes">
+
+                    <li class="list-group-item"><b>PostCode :</b>{{near?.postCode}}</li>
+                    <li class="list-group-item"><b>Region :</b>{{near?.region}}</li>
+                    <li class="list-group-item"><b>Country :</b>{{near?.country}}</li>
+                    <div class="mt-2"></div>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>

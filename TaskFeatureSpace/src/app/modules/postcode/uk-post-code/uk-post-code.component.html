@@ -1,0 +1,28 @@
+<!-- Navbar -->
+<nav class="navbar navbar-light col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: #563d7c;">
+    <div class="col-lg-12 d-flex justify-content-center">
+
+        <!-- Autocomplete -->
+        <div class="offset-lg-5 col-lg-11 form-inline">
+            <div class="ng-autocomplete">
+                <ng-autocomplete [formControl]="searchPostCode" [data]="items" placeholder="Search PostCode" (selected)='selectEvent($event)' (inputChanged)='onValueEntered($event)' [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
+                </ng-autocomplete>
+
+                <ng-template #itemTemplate let-item>
+                    <a [innerHTML]="item"></a>
+                </ng-template>
+
+                <ng-template #notFoundTemplate let-notFound>
+                    <div [innerHTML]="notFound"></div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div style="text-align: center;" *ngIf="showMsg">
+    <h1>Please Enter Postcode to Search</h1>
+</div>
+
+<!-- For dynamic rendering of post-code-details component -->
+<router-outlet></router-outlet>
